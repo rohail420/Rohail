@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohail</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      animation: backgroundShift 10s ease infinite alternate;
+    }
+
+    @keyframes backgroundShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 2.5rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      max-width: 420px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .form-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #222222;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.6rem;
+      color: #444444;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.65rem;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #ff6a00;
+      box-shadow: 0 0 8px rgba(255, 106, 0, 0.5);
+      outline: none;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 0.85rem;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      box-shadow: 0 8px 20px rgba(238, 9, 121, 0.6);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Employee Info</h2>
+    <form id="employeeForm">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="job">Date of Birth</label>
+        <input type="date" id="job" name="job" required>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="number" id="salary" name="salary" required>
+      </div>
+
+      <div class="form-group">
+        <label for="jobLevel">Job Level</label>
+        <select id="jobLevel" name="jobLevel" required>
+          <option value="">Select Level</option>
+          <option value="junior">Junior</option>
+          <option value="senior">Senior</option>
+          <option value="executive">Executive</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+<script src="code.js"></script>
+</html>
